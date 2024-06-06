@@ -1,19 +1,19 @@
-import './Header.css'
+import'./Header.css'
 import { FaGithub,FaLinkedinIn,FaRegEnvelope } from "react-icons/fa"
 
 function Header() {
 
   return (
    <header className="header">
-      <h1>Technical Challenge</h1>
-      <ul>
-        <li>
+      <h1 className='title'>Technical Challenge</h1>
+      <ul className='ul-networks'> 
+        <li className='li-networks'>
           <FaLinkedinIn/>
         </li>     
-        <li>
+        <li className='li-networks'>
           <FaGithub/>
         </li>     
-        <li>
+        <li className='li-networks'>
           <FaRegEnvelope/>
         </li>
       </ul>
