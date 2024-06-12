@@ -5,4 +5,9 @@
   vertical-align:baseline;
   font-family: "Archivo", sans-serif;
   }
-  
+
+  .form-container{
+    display: flex;
+    gap: 5px; /* Espaço entre os componentes */
+    margin: 150px;
+  }
