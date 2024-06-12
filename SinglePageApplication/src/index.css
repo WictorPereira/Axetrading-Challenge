@@ -9,5 +9,5 @@
   .form-container{
     display: flex;
     gap: 5px; /* Espaço entre os componentes */
-    margin: 150px;
+    margin: 150px 150px 50px 150px;
   }
