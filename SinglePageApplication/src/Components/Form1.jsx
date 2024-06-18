@@ -1,6 +1,16 @@
 import './Form1.css'
+import React, { useState} from 'react';
+
 
 function Form1 () {
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (e) => {
+  const file = e.target.files[0]
+    setSelectedFile(file);
+
+  }
+  
   return(
     <div className='div-forms'>
       <form className="form">
@@ -10,11 +20,26 @@ function Form1 () {
             className='file-input' 
             type="file" 
             accept='.json'
+            onChange={handleFileChange}
           />
-          <button className='btn-import'>Import</button>
+          {selectedFile && (
+          <div>         
+            <p className='p-results'>Nome do arquivo: {selectedFile.name} </p>
+            <p className='p-results'>Couts do arquivo: {selectedFile.lastModified}</p>
+            <p className='p-results'>Tamanho do arquivo: {selectedFile.size} bytes </p>  
+               
+          </div>
+          
+        )}
+
+         <button className='btn-import'>Import</button>   
+         
+         
+             
     </form>
     </div>
   )
 }
+
 
 export default Form1

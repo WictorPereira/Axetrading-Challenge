@@ -39,7 +39,7 @@
     width: 80%;
     height: 30px;
     border-radius: 5px;
-
+    
     color: #005bb1;
 }
 .file-input::-webkit-file-upload-button{
@@ -51,6 +51,9 @@
     color: #005bb1;
 }
 
+.p-results{
+    margin-bottom: 3.5px;
+}
 .btn-import{
     width: 65px;
     height: 30px;
@@ -61,4 +64,5 @@
 
     background-color: #005bb1;
     color: #fff;
+    cursor: pointer;
 }

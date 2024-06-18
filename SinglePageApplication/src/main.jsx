@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header/>
     <div className='form-container'>
-    <Form1/>
+    <Form1 />
     <Form2/>
     </div>
     <Table/>

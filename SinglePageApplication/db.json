@@ -1,0 +1,17 @@
+[
+	{
+		"extension": "java",
+		"count": 5000,
+		"filesize": 360
+	},
+	{
+		"extension": "xml",
+		"count": 3,
+		"filesize": 45.54
+	},
+	{
+		"extension": "xml",
+		"count": 14,
+		"filesize": 45
+	}
+]
