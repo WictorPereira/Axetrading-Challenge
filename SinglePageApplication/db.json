@@ -1,17 +1,16 @@
-[
-	{
-		"extension": "java",
-		"count": 5000,
-		"filesize": 360
-	},
-	{
-		"extension": "xml",
-		"count": 3,
-		"filesize": 45.54
-	},
-	{
-		"extension": "xml",
-		"count": 14,
-		"filesize": 45
-	}
-]
+{
+  "arquivos": [
+    {
+      "name": "java",
+      "lastModified": 5000,
+      "size": 360,
+      "id": "da5f"
+    },
+    {
+      "name": "xml",
+      "lastModified": 3,
+      "size": 45.54,
+      "id": "40c6"
+    }
+  ]
+}

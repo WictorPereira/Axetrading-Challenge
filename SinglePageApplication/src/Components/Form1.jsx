@@ -1,5 +1,5 @@
 import './Form1.css'
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 
 
 function Form1 () {
@@ -8,8 +8,43 @@ function Form1 () {
   const handleFileChange = (e) => {
   const file = e.target.files[0]
     setSelectedFile(file);
-
   }
+
+  //Evento do botao envair o dados do arquivo para o db.json
+  function btnImport (event) {
+    event.preventDefault()
+
+    if (!selectedFile) {
+      console.log("Nenhum arquivo selecionado.")
+      return;
+    }
+
+    const fileDetails = {
+      name: selectedFile.name,
+      lastModified: selectedFile.lastModified,
+      size: selectedFile.size,
+    }
+    
+    fetch("http://localhost:5000/arquivos",{
+      method: "POST",
+      headers:{
+        'Content-Type': 'application/json',
+      },
+      body:(JSON.stringify(fileDetails))
+    }
+  )
+  .then((resp) => {
+    if(!resp.ok) {
+      throw new Error('Erro ao enviar os dados.')
+    }
+    return resp.json();
+  })
+  .then((data)=>{ console.log("Dados enviados com sucesso:", data)
+  })
+  .catch((err)=> console.log("Erro ao enviar os dados:", err))
+  
+}
+
   
   return(
     <div className='div-forms'>
@@ -32,7 +67,7 @@ function Form1 () {
           
         )}
 
-         <button className='btn-import'>Import</button>   
+         <button className='btn-import' onClick={btnImport}>Import</button>   
          
          
              

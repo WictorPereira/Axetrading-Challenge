@@ -11,7 +11,7 @@ function Table() {
                 <li>Filesize</li>
                 <li>Action</li>
             </ul>
-            <p className="p-table">Add new data by importing it from a file or filling in the fields above!</p>
+            
             
             <Results/>
            
