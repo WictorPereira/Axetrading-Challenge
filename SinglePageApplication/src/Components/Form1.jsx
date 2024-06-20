@@ -74,8 +74,7 @@ function Form1() {
               Extensão do arquivo: {selectedFile.name}
             </p>
             <p className="p-results">Count: {charCount} caracteres</p>
-            <p className="p-results">filesize: {selectedFile.size} bytes
-            </p>
+            <p className="p-results">filesize: {selectedFile.size} bytes</p>
           </div>
         )}
 

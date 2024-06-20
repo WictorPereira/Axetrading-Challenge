@@ -3,23 +3,6 @@ import "./Table.css";
 import React, { useState, useEffect } from "react";
 
 function Results() {
-  function removeFiles(id) {
-    fetch(`http://localhost:5000/arquivos/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => {
-        if (!resp.ok) {
-          throw new Error("Erro ao deletar o arquivo");
-        }
-
-        setFiles(files.filter((file) => file.id !== id));
-      })
-      .catch((err) => console.log(err));
-  }
-
   const [files, setFiles] = useState([]);
 
   //buscando arquivos db.json
@@ -47,6 +30,24 @@ function Results() {
       </p>
     );
   }
+
+  function removeFiles(id) {
+    fetch(`http://localhost:5000/arquivos/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => {
+        if (!resp.ok) {
+          throw new Error("Erro ao deletar o arquivo");
+        }
+
+        setFiles(files.filter((file) => file.id !== id));
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
     <ul className="ul-results">
       {files.map((file, index) => (

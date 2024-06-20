@@ -10,9 +10,7 @@ function Table() {
                 <li>Count</li>
                 <li>Filesize</li>
                 <li>Action</li>
-            </ul>
-            
-            
+            </ul>           
             <Results/>
            
         </div>

@@ -40,12 +40,20 @@
     padding:0px 0px 0px 5px
 }
 
+.input-edit::placeholder{
+    color:rgba(0, 0, 0, 0.473)
+}
+
 .input-editNum{
     border: #000 1.8px solid;
     width: 80%;
     height: 30px;
     border-radius: 5px;
     padding:0px 0px 0px 5px
+}
+
+.input-editNum::placeholder{
+    color:rgba(0, 0, 0, 0.473)
 }
 
 .div-btns{
