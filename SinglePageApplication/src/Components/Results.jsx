@@ -2,7 +2,7 @@ import "./Table.css";
 
 import React, { useState, useEffect } from "react";
 
-function Results() {
+function Results({ onEdit }) {
   const [files, setFiles] = useState([]);
 
   //buscando arquivos db.json
@@ -44,6 +44,7 @@ function Results() {
         }
 
         setFiles(files.filter((file) => file.id !== id));
+        alert('File deleted successfully')
       })
       .catch((err) => console.log(err));
   }
@@ -56,7 +57,7 @@ function Results() {
           <span>{file.count}</span>
           <span>{file.filesize}</span>
           <div className="div-btns-results">
-            <button className="btn-edit">Edit</button>
+            <button className="btn-edit" onClick={() => onEdit(file)}>Edit</button>
             <button className="btn-delete" onClick={() => removeFiles(file.id)}>
               Delete
             </button>

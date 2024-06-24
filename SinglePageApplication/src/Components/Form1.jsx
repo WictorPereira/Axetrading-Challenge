@@ -53,6 +53,10 @@ function Form1() {
       })
       .then((data) => {
         console.log("Dados enviados com sucesso:", data);
+        alert('Successful import')
+        setSelectedFile(null);
+        setCharCount(0);
+
       })
       .catch((err) => console.log("Erro ao enviar os dados:", err));
   }
@@ -71,7 +75,7 @@ function Form1() {
         {selectedFile && (
           <div className="div-p-results">
             <p className="p-results">
-              Extensão do arquivo: {selectedFile.name}
+              Nome do arquivo: {selectedFile.name}
             </p>
             <p className="p-results">Count: {charCount} caracteres</p>
             <p className="p-results">filesize: {selectedFile.size} bytes</p>

@@ -1,7 +1,7 @@
 import './Table.css'
 import Results from'./Results.jsx'
 
-function Table() {
+function Table({ onEdit }) {
 
     return(
         <div className="container-table">
@@ -11,7 +11,7 @@ function Table() {
                 <li>Filesize</li>
                 <li>Action</li>
             </ul>           
-            <Results/>
+            <Results onEdit={onEdit}/>
            
         </div>
     )
