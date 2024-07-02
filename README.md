@@ -49,7 +49,7 @@ Este projeto é uma aplicação de página única (SPA) desenvolvida com a vers�
   - **components/**: Componentes reutilizáveis da aplicação.
 - **main.js**: Componente principal da aplicação.
 - **index.css**: Estilização global.
-- - **db.json**: banco de dados.
+- **db.json**: banco de dados.
 
 ## Tecnologias Utilizadas
 - React JS
