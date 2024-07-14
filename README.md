@@ -56,3 +56,5 @@ Este projeto é uma aplicação de página única (SPA) desenvolvida com a vers�
 - CSS
 - Json
 - React-icons
+
+https://github.com/user-attachments/assets/55d3d257-6f95-457c-a0e0-0b41ef240cd2
